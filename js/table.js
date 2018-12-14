@@ -2,6 +2,7 @@
 // The prepend() method inserts specified content at the beginning of the selected elements.
 // Tip: To insert content at the end of the selected elements, use the append() method.  
 
+///////////////////prepend/////////////////////
 $(document).ready(function(){
     // $("li").add("");
 
@@ -15,25 +16,42 @@ $(document).ready(function(){
     });
   });
 
+
+  // ////////////////////////append/////////////////
   $(document).ready(function(){
     $("#btn3").click(function(){
-      $(".prep").append(" <b>Appended text</b>.");
+      $(".prep").remove("");
     });
     $("#btn4").click(function(){
-      $("ol").append("<li>Appended item</li>");
+    var name = prompt("Please enter your name", "Harry");
+      $(".column1").append(name);
+
+    var surname = prompt("Please enter your surname", "Potter");
+    $(".column2").append(surname);
+
+    var birth = prompt("Please enter your date of birth", " 13 Jan 1999");
+    $(".column3").append(birth);
+
+    
+
     });
+
+    // if (person != null) {
+    //     document.getElementById("demo").innerHTML =
+    //     "Hello " + person + "! How are you today?";
+    // }
   });
 
 // ===============================user input=============================
 
-counter = 0;
+ var counter = 0;
 function myFunction() {
-  var person = prompt("Please enter your name", "Harry Potter");
-  if (person != null) {
-      document.getElementById("demo").innerHTML =
-      "Hello " + person + "! How are you today?";
-  }
+ 
 }
 
 
-var myArray = new Array();
+var myArray = new Array(); //name
+var myArray = new Array(); //surname
+var myArray = new Array(); //date of birth
+
+
