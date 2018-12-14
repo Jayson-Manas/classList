@@ -20,9 +20,9 @@ $(document).ready(function(){
   // ////////////////////////append/////////////////
   $(document).ready(function(){
     $("#btn3").click(function(){
-      $(".prep").remove("");
+      // $(".prep").remove("");
     });
-    $("#btn4").click(function(){
+    $("#btn").click(function(){
     var name = prompt("Please enter your name", "Harry");
       $(".column1").append(name);
 
@@ -44,14 +44,32 @@ $(document).ready(function(){
 
 // ===============================user input=============================
 
- var counter = 0;
-function myFunction() {
+//  var counter = 0;
+// function myFunction() {
  
-}
+// }
 
 
 var myArray = new Array(); //name
 var myArray = new Array(); //surname
 var myArray = new Array(); //date of birth
 
+/////////////////////////search//////////////////////////////////
+function myFunction() {
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  ul = document.getElementsByClassName("col");
+  li = ul.getElementsByClassName("person");
+  for (i = 0; i < li.length; i++) {
+      a = li[i].getElementsByClassName("person")[0];
+      txtValue = a.textContent || a.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+      } else {
+          li[i].style.display = "none";
+      }
+  }
+}
 
+///////////////////////////search//////////////////////////////////

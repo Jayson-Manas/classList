@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<button class="addPerson">add a person</button>
+<button id="btn" class="addPerson">add a person</button>
     <!-- ==================grid 1=========================== -->
-<div class="column1">
+<div class="column1" id="col">
     <h2>name</h2>
     <p class="person" id="person1">daniel</p>
     <p class="person" id="person2"></p>
@@ -36,6 +36,7 @@
         <br>
     <!-- ==================grid 1=========================== -->
 <button>edit</button>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
 <button>delete</button>
 <button>save</button>
 <!-- ====================prepend========================= -->
@@ -60,7 +61,7 @@
 
 <p>Click the button to demonstrate the prompt box.</p>
 
-<button onclick="myFunction()">Try it</button>
+<!-- <button onclick="myFunction()">Try it</button> -->
 
 <p id="demo"></p>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
